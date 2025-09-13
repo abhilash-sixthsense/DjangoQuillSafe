@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "django-quill-safe"
+version = "0.1.0"
+description = "Safe and minimal integration of Quill editor in Django using JSON delta format only."
+authors = ["Abhilash Ramachandran <abhilash.sixthsense@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "quillsafe" }]
+include = [
+  "quillsafe/static/**/*",
+  "quillsafe/templates/**/*",
+  "README.md",
+  "LICENSE"
+]
+exclude = [
+  "**/*.sqlite3",
+  "**/*.db",
+  "**/__pycache__",
+  "**/*.pyc",
+  "**/.DS_Store"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+Django = "^5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0"
+isort = "^5.12"
+pylint = "^3"
+pylint-django = "^2.6"
+pytest = "^7.0"
+pytest-django = "^4.5"
+sphinx = "^8.2.3"
+sphinx-rtd-theme = "^3.0.2"
+
+[tool.poetry.scripts]
+build-docs = "sphinx.cmd.build:main"
+
+[tool.black]
+line-length = 150
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+  "C0111",  # missing docstring
+  "C0116"   # missing function docstring
+]
+
+[tool.pylint.'MASTER']
+max-line-length = 200
+load-plugins = ["pylint_django"]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

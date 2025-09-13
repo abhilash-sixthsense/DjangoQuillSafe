@@ -1,0 +1,93 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.log
+
+# ===============================
+# Virtual environments
+# ===============================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ===============================
+# Poetry
+# ===============================
+poetry.lock
+
+# ===============================
+# VSCode
+# ===============================
+.vscode/
+
+# ===============================
+# Django
+# ===============================
+*.sqlite3
+db.sqlite3
+*.pot
+*.pyc
+instance/
+media/
+staticfiles/
+*.mo
+
+# Ignore Django migration files if not versioning
+**/migrations/*.py
+**/migrations/*.pyc
+!*/migrations/__init__.py
+
+# ===============================
+# Coverage / testing
+# ===============================
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.cache/
+
+# ===============================
+# MyPy / Pyright / Pylint
+# ===============================
+.mypy_cache/
+.dmypy.json
+.pyright/
+.pylint.d/
+
+# ===============================
+# Build artifacts
+# ===============================
+build/
+dist/
+*.manifest
+*.spec
+
+# ===============================
+# Django sample project
+# ===============================
+quillsafe/sample_project/db.sqlite3
+quillsafe/sample_project/__pycache__/
+quillsafe/sample_project/*/__pycache__/
+quillsafe/sample_project/articles/migrations/
+
+# ===============================
+# OS-specific
+# ===============================
+.DS_Store
+Thumbs.db
+
+# Ignore Sphinx build output
+docs/_build/

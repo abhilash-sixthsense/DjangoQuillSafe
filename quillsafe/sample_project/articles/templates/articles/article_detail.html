@@ -1,0 +1,20 @@
+{% load static quill_tags %}
+<!doctype html>
+<html>
+    <head>
+        <title>{{ article.title }}</title>
+        <link
+            href="{% static 'quillsafe/quill.snow.min.css' %}"
+            rel="stylesheet"
+        />
+        <script src="{% static 'quillsafe/quill.min.js' %}"></script>
+    </head>
+    <body>
+        <h1>{{ article.title }}</h1>
+
+        <h2>Content (Rendered)</h2>
+        {% quill_display article.content %}
+
+        <p><a href="{% url 'article_list' %}">Back to list</a></p>
+    </body>
+</html>

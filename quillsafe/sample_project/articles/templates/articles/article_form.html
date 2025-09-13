@@ -1,0 +1,20 @@
+{% load static %} {% load quill_tags %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>Create Article</title>
+        <link
+            href="{% static 'quillsafe/quill.snow.min.css' %}"
+            rel="stylesheet"
+        />
+        <script src="{% static 'quillsafe/quill.min.js' %}"></script>
+    </head>
+    <body>
+        <h1>Create Article</h1>
+        <form method="post" novalidate>
+            {% csrf_token %} {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </body>
+</html>
