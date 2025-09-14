@@ -7,8 +7,6 @@ Safe and minimal integration of Quill editor in Django using JSON delta format o
 
 Welcome to django-quill-safe's documentation!
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

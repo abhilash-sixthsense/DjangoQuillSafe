@@ -9,6 +9,7 @@ A simple and secure integration of the Quill rich text editor into Django projec
 * **Form Handling:** A dedicated `QuillFormField` and widget for seamless form handling.
 * **Read-Only Display:** A `quill_display` template tag for safely rendering content in read-only views.
 * **Bundled Assets:** Includes Quill 2.0.3 assets for easy static file integration.
+* **Multiple Editor Support:** Safely handles multiple Quill editors on a single page/form without conflicts.
 
 ## Installation
 
@@ -97,6 +98,9 @@ First, load the tag in your template and then use it as follows:
 ## Data Handling & Security
 
 The `QuillField` stores content in the JSON delta format, not raw HTML. This design is crucial for security as it prevents unvalidated HTML from being stored directly in your database. You can access and manipulate the raw delta JSON directly from your views or models if needed.
+
+## Documentation
+For more detailed documentation, please visit: [https://djangoquillsafe.readthedocs.io](https://djangoquillsafe.readthedocs.io/en/latest/index.html)
 
 ## License
 

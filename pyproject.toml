@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-quill-safe"
-version = "0.1.0"
+version = "0.1.1"
 description = "Safe and minimal integration of Quill editor in Django using JSON delta format only."
 authors = ["Abhilash Ramachandran <abhilash.sixthsense@gmail.com>"]
 license = "MIT"
