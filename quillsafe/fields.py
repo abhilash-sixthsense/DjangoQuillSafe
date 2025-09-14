@@ -52,6 +52,6 @@ class QuillField(models.TextField):
         return value
 
     def formfield(self, **kwargs):
-        defaults = {'form_class': QuillFormField}
-        defaults.update(kwargs)
-        return super().formfield(**defaults)
+        defaults = {'form_class': QuillFormField,"widget": QuillWidget}
+        kwargs.update(defaults)
+        return super().formfield(**kwargs)
