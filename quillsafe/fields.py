@@ -4,7 +4,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from .widgets import QuillWidget
 
-class QuillFormField(forms.Field):
+class QuillFormField(forms.CharField):
     widget = QuillWidget
 
     def to_python(self, value):
